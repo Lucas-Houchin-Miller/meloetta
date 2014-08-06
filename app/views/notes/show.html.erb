@@ -1,0 +1,16 @@
+<h1>&nbsp</h1>
+<center>
+<h1>Note #<%= @note.id %></h1>
+
+<div>
+  <strong>Picture</strong>:<br />
+  <p><%= @note.picture.name %></p>
+</div>
+<div>
+  <strong>Note Content</strong>:<br />
+  <p><%= @note.desc %></p>
+</div>
+
+<a href="/notes/<%= @note.id %>/edit">Edit</a> |
+<a href="/notes/<%= @note.id %>/destroy">Destroy</a>
+</center>

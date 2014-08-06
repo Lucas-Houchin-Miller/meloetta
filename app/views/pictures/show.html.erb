@@ -1,0 +1,27 @@
+<h1>&nbsp</h1>
+<center>
+<h1>Picture #<%= @picture.id %></h1>
+<div>
+  <strong>Image</strong>:<br />
+  <img src="<%= @picture.img_url %>">
+</div>
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @picture.name %></p>
+</div>
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @user.name %></p>
+</div>
+  <div>
+    <strong>Notes</strong>:<br />
+  <% @picture.notes.each do |note|  %>
+    <p><%= note.desc %></p>
+  <% end %>
+  </div>
+  <div>
+<a href="/new_note">Add a Note</a> |
+<a href="/pictures/<%= @picture.id %>/edit">Edit</a> |
+<a href="/pictures/<%= @picture.id %>/destroy">Destroy</a> |
+  </div>
+</center>

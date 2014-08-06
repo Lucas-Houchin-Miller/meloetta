@@ -1,0 +1,29 @@
+<h1>Notes</h1>
+
+<p><a href="/new_note">Add a New Note</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Picture &nbsp</th>
+      <th>Desc</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @notes.each do |note| %>
+    <tr>
+          <td><%= note.picture_id %></td>
+          <td><%= note.desc %></td>
+          <td><a href="/notes/<%= note.id %>">Show</a>
+        </td>
+      <td><a href="/notes/<%= note.id %>/edit">Edit</a></td>
+      <td><a href="/notes/<%= note.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

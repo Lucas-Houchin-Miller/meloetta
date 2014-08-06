@@ -1,0 +1,19 @@
+<h1>&nbsp></h1>
+<center>
+ <h1>User #<%= @user.email %></h1>
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @user.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @user.email %></p>
+</div>
+<div>
+  <strong>Profile Pic</strong>:<br />
+  <img src="<%= @user.profile_url %>">
+</div>
+
+<a href="/users/<%= @user.id %>/edit">Edit</a> |
+<a href="/users/<%= @user.id %>/destroy">Destroy</a>
+</center>

@@ -1,0 +1,21 @@
+<h1>Editing Picture #<%= @picture.id %></h1>
+
+<form action="/pictures/<%= @picture.id %>/update">
+  <div>
+    <label for="img_url">img_url</label><br />
+    <input id="img_url" name="img_url" value="<%= @picture.img_url  %>" type="text" />
+  </div>
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @picture.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="user_id">user_id</label><br />
+    <input id="user_id" name="user_id" value="<%= @picture.user_id  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

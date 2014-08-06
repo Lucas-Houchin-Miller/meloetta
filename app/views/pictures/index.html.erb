@@ -1,0 +1,30 @@
+<h1>Pictures</h1>
+
+<p><a href="/new_picture">Add a New Picture</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Img url &nbsp</th>
+      <th>Name</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @pictures.each do |picture| %>
+    <tr>
+          <td><%= picture.img_url %></td>
+          <td>&nbsp<%= picture.name %> &nbsp</td>
+          <td>&nbsp<%= picture.user.name %> &nbsp</td>
+          <td><a href="/pictures/<%= picture.id %>">Show &nbsp</a></td>
+      <td><a href="/pictures/<%= picture.id %>/edit">Edit &nbsp</a></td>
+      <td><a href="/pictures/<%= picture.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

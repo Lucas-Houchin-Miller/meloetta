@@ -1,0 +1,29 @@
+<h1>&nbsp</h1>
+<center>
+<h1>Editing User #<%= @user.id %></h1>
+<form action="/users/<%= @user.id %>/update">
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @user.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="email">email</label><br />
+    <input id="email" name="email" value="<%= @user.email  %>" type="text" />
+  </div>
+  <div>
+    <label for="profile_url">profile_url</label><br />
+    <input id="profile_url" name="profile_url" value="<%= @user.profile_url  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+  <div>
+    <label for="password">password</label><br />
+    <input id="password" name="password" type="password" />
+  </div>
+  <div>
+    <label for="password_confirmation">password_confirmation</label><br />
+    <input id="password_confirmation" name="password_confirmation" type="password" />
+  </div>
+</center>
