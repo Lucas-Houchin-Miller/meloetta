@@ -57,5 +57,5 @@ Rails.application.routes.draw do
   get "/sessions/create" => "sessions#create"
   get "/sessions/destroy" => "sessions#destroy"
   get "/share" => "notes#share"
-  get "/home" => "notes#home"
+  root to: "notes#home"
 end
