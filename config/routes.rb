@@ -55,5 +55,7 @@ Rails.application.routes.draw do
   #get "/sign_out" => "pages#sign_out"
   get "/sessions/new" =>"sessions#new"
   get "/sessions/create" => "sessions#create"
-  get "sessions/destroy" => "sessions#destroy"
+  get "/sessions/destroy" => "sessions#destroy"
+  get "/share" => "notes#share"
+  get "/home" => "notes#home"
 end
